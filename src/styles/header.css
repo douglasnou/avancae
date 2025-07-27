@@ -33,8 +33,11 @@
             text-decoration: underline;
         }
 
-        img{
+        .Logo{
             width: 20%;
+            img{
+                width: 100%;
+            }
         }
     }
 

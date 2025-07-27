@@ -11,7 +11,7 @@ export const Header = () => {
             <div className="container">
                 <nav>
                     <Link className="curriculo" to="/curriculo">Cadastre seu currículo</Link>
-                    <img src={Logo} alt="Logo da empresa" />
+                    <Link className="Logo" to="/"><img src={Logo} alt="Logo da empresa" /></Link>
                     <Link className="empresa" to="/empresa">Cadastre sua empresa</Link>
                 </nav>
             </div>
