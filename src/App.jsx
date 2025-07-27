@@ -5,6 +5,8 @@ import { CadastroCurriculo } from "./pages/CadastroCurriculo";
 import { LoginCurriculo } from "./pages/LoginCurriculo";
 import { LoginEmpresa } from "./pages/LoginEmpresa";
 import { CadastroEmpresa } from "./pages/CadastroEmpresa";
+import { ExampleOne } from "./pages/ExampleOne";
+import { ExampleTwo } from "./pages/ExampleTwo";
 
 function App() {
 
@@ -15,6 +17,9 @@ function App() {
       <Route path="/login-candidato" element={<LoginCurriculo />} />
       <Route path="/empresa" element={<CadastroEmpresa />} />
       <Route path="/login-empresa" element={<LoginEmpresa />} />
+
+      <Route path="/pessoa" element={<ExampleOne />}/>
+      <Route path="/pagina-da-empresa" element={<ExampleTwo />}/>
     </Routes>
   )
 }

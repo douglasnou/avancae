@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Esconde o overflow para o carrossel */
+    overflow: hidden;
 
     .container{
         width: 90%;
@@ -14,18 +14,18 @@
 
         img{
             width: 220px;
-            flex-shrink: 0; /* Impede que as imagens encolham */
+            flex-shrink: 0;
         }
 
         &.mobile {
             justify-content: flex-start;
-            overflow: hidden; /* Esconde o overflow no mobile */
+            overflow: hidden;
             
             .carousel-track {
                 display: flex;
                 gap: 30px;
-                will-change: transform; /* Otimização de performance */
-                transition: transform 0.1s linear; /* Suaviza o movimento */
+                will-change: transform;
+                transition: transform 0.1s linear;
             }
         }
     }

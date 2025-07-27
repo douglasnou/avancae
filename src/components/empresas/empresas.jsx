@@ -4,6 +4,7 @@ import Empresa2 from "./../../assets/empresa-2.png";
 import Empresa3 from "./../../assets/empresa-3.png";
 import Empresa4 from "./../../assets/empresa-4.png";
 import Empresa5 from "./../../assets/empresa-5.png";
+import { Link } from "react-router-dom";
 
 export const Empresas = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
@@ -21,18 +22,16 @@ export const Empresas = () => {
     useEffect(() => {
         if (!isMobile) return;
 
-        const scrollSpeed = 1; // Ajuste a velocidade aqui
+        const scrollSpeed = 1;
         const interval = setInterval(() => {
             setScrollPosition(prev => {
-                // Largura total do container com todas as imagens + gaps
                 const containerWidth = 220 * 5 + 30 * 4;
-                // Quando chegar ao final, reinicia com transição suave
                 if (prev >= containerWidth) {
                     return 0;
                 }
                 return prev + scrollSpeed;
             });
-        }, 50); // Ajuste o intervalo para mudar a suavidade
+        }, 50);
 
         return () => clearInterval(interval);
     }, [isMobile]);
@@ -43,26 +42,27 @@ export const Empresas = () => {
         <section className="empresaSection">
             <div className={`container ${isMobile ? 'mobile' : ''}`}>
                 {isMobile ? (
-                    <div 
+                    <Link to="/pagina-da-empresa"
                         className="carousel-track"
                         style={{ transform: `translateX(-${scrollPosition}px)` }}
                     >
-                        {/* Duplicamos as imagens para criar o efeito contínuo */}
                         {[...empresas, ...empresas].map((empresa, index) => (
-                            <img 
-                                key={`mobile-${index}`} 
-                                src={empresa} 
-                                alt="Logo da empresa" 
+                            <img
+                                key={`mobile-${index}`}
+                                src={empresa}
+                                alt="Logo da empresa"
                             />
                         ))}
-                    </div>
+                    </Link>
                 ) : (
                     empresas.map((empresa, index) => (
-                        <img 
-                            key={`desktop-${index}`} 
-                            src={empresa} 
-                            alt="Logo da empresa" 
-                        />
+                        <Link to="pagina-da-empresa">
+                            <img
+                                key={`desktop-${index}`}
+                                src={empresa}
+                                alt="Logo da empresa"
+                            />
+                        </Link>
                     ))
                 )}
             </div>

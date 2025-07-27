@@ -14,7 +14,9 @@ export const WhatsApp = () => {
                     <p>
                         Apresentamos a <strong>Avançaê</strong>, a <strong>IA</strong> que transforma sua plataforma de divulgação de vagas em uma experiência prática, ágil e envolvente.
                     </p>
-                    <img src={Logo} alt="logo da empresa" />
+                    <a href="https://api.whatsapp.com/send/?phone=%2B5599981054867&text&type=phone_number&app_absent=0" target="_blank">
+                        <img src={Logo} alt="logo da empresa" />
+                    </a>
                 </div>
             </div>
         </section>
