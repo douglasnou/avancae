@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    max-width: 3000px;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
