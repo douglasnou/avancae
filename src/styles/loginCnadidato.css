@@ -99,3 +99,23 @@
         }
     }
 }
+@media(max-width: 1024px){
+    .loginSection{
+        background-image: url("./../assets/candidato-bkg.png");
+        .container{
+            width: 100%;
+
+            form{
+                margin: 0;
+
+                .inputEdit{
+                    margin: 10px auto;
+                }
+
+                .btnCard{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

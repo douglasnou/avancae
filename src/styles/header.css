@@ -5,6 +5,24 @@
     align-items: center;
     justify-content: center;
     background: #1861CA;
+    position: relative;
+
+    .container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        .mobile-menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0 15px;
+            z-index: 1001;
+        }
+    }
 
     nav{
         width: 60%;
@@ -41,12 +59,62 @@
         }
     }
 
+    .mobile-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #1861CA;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        z-index: 1000;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+
+        .curriculo, .empresa {
+            color: white;
+            font-weight: 700;
+            text-align: center;
+            padding: 10px;
+            font-size: 1.1rem;
+        }
+
+        .mobile-login-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 20px;
+
+            .candidato, .empresas {
+                color: white;
+                font-weight: 700;
+                text-align: center;
+                padding: 10px;
+                font-size: 1.1rem;
+            }
+
+            .candidato {
+                background: #00D570;
+                border-radius: 5px;
+            }
+
+            .empresas {
+                background: #FF4000;
+                border-radius: 5px;
+            }
+        }
+    }
+
     .login{
         width: 20%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        
         button{
             width: 100%;
             font-size: 1.5rem;
@@ -75,18 +143,54 @@
                 font-size: .9375rem;
                 color: #00D570;
                 font-weight: 700;
-
             }
             .empresas{
                 font-size: .9375rem;
                 color: #FF4000;
                 font-weight: 700;
-
             }
         }
 
         .hide{
             display: none;
+        }
+
+        &.mobile {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        flex-wrap: wrap;
+        padding: 15px 10px;
+
+        .container {
+            nav {
+                display: none;
+            }
+        }
+
+        .login:not(.mobile) {
+            display: none;
+        }
+
+        .Logo {
+            width: 40% !important;
+            margin: 0 auto;
+            text-align: center;
+            img{
+                width: 50%;
+            }
+        }
+    }
+
+    @media (min-width: 1025px) {
+        .mobile-menu {
+            display: none !important;
+        }
+        
+        .mobile-menu-toggle {
+            display: none !important;
         }
     }
 }

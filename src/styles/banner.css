@@ -38,3 +38,18 @@
         }
     }
 }
+
+@media(max-width: 1024px){
+    .bannerSection{
+        height: auto;
+        .container{
+            width: 100%;
+            margin: 20px auto;
+            justify-content: center;
+            .card{
+                width: 100%;
+                margin: 0 20px;
+            }
+        }
+    }
+}

@@ -103,3 +103,28 @@
         }
     }
 }
+
+@media(max-width:1024px){
+    .cadastroSection{
+        .logo{
+            width: 50%;
+        }
+        .container{
+            h2{
+                font-size: 2.25rem;
+            }
+            form{
+                width: 100%;
+                .normalInput{
+                    height: 50px;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        footer{
+            img{
+                width: 80%;
+            }
+        }
+    }
+}

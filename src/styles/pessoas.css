@@ -7,6 +7,7 @@
     background-image: url("./../assets/pessoa-background.png");
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 40px 0;
 
     h2{
         font-size: 2.25rem;
@@ -14,6 +15,7 @@
         text-align: center;
         text-transform: uppercase;
         color: #00D570;
+        margin-bottom: 20px;
     }
 
     .container{
@@ -23,21 +25,27 @@
         align-items: center;
         justify-content: center;
         gap: 40px;
+        flex-wrap: wrap;
 
         .card{
             width: 20%;
-            height: 475px;
+            min-width: 250px;
+            height: auto;
+            min-height: 475px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             background: #1861CA;
             border-radius: 45px;
-            padding: 15px;
+            padding: 25px 15px;
+            margin-bottom: 30px;
 
             img{
                 width: 80%;
                 border-radius: 15px;
+                object-fit: cover;
+                aspect-ratio: 1/1;
             }
 
             .data{
@@ -65,6 +73,98 @@
                 font-weight: 400;
                 color: #FFFFFF;
                 margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        padding: 30px 0;
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .container {
+            gap: 30px;
+            justify-content: space-around;
+
+            .card {
+                width: 45%;
+                min-width: 200px;
+                min-height: 420px;
+                padding: 20px 15px;
+                margin-bottom: 20px;
+
+                img {
+                    width: 85%;
+                }
+
+                .data {
+                    font-size: 0.6rem;
+                    margin-top: 15px;
+                }
+
+                .nome {
+                    font-size: 0.9rem;
+                }
+
+                .texto {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        .container {
+            gap: 20px;
+
+            .card {
+                width: 80%;
+                min-width: 0;
+                min-height: 380px;
+
+                .data {
+                    font-size: 0.55rem;
+                }
+
+                .nome {
+                    font-size: 0.85rem;
+                }
+
+                .texto {
+                    font-size: 0.65rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        .container {
+            width: 95%;
+
+            .card {
+                width: 90%;
+                min-height: 350px;
+                padding: 15px 10px;
+
+                img {
+                    width: 90%;
+                }
+
+                .data, .nome, .texto {
+                    width: 90%;
+                }
             }
         }
     }

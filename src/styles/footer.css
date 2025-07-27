@@ -17,3 +17,11 @@
         }
     }
 }
+
+@media(max-width: 1024px){
+    .footerSection{
+        .container{
+            width: 80%;
+        }
+    }
+}

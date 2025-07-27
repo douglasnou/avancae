@@ -99,3 +99,27 @@
         }
     }
 }
+@media(max-width: 1024px){
+    .loginEmpresaSection{
+        background-image: url("./../assets/empresa-bkg.png");
+        .container{
+            width: 100%;
+
+            h2{
+                font-size: 1.5rem;
+            }
+
+            form{
+                margin: 0;
+
+                .inputEdit{
+                    margin: 10px auto;
+                }
+
+                .btnCard{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
