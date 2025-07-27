@@ -19,7 +19,7 @@ export const Header = () => {
                 <button onClick={()=> setIsHide(!isHide)}>Entrar/Login</button>
                 <div className={!isHide ? "hide":"options"}>
                     <Link className="candidato" to="/login-candidato">Candidato</Link>
-                    <Link className="empresas" to="login-empresa">Empresa</Link>
+                    <Link className="empresas" to="/login-empresa">Empresa</Link>
                 </div>
             </div>
         </section>
