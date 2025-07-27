@@ -13,3 +13,8 @@ a{
     color: black;
     cursor: pointer;
 }
+
+button{
+    background: none;
+    border: none;
+}
