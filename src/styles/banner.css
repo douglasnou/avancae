@@ -21,9 +21,19 @@
             align-items: center;
             justify-content: center;
             margin: 0 50px;
+            background: #FFFFFF;
+            border-radius: 45px;
+            padding: 40px;
 
             img{
                 width: 30%;
+                margin: 10px;
+            }
+
+            p{
+                font-size: .875rem;
+                line-height: 20px;
+                color: #031B3C;
             }
         }
     }

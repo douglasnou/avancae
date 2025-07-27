@@ -1,0 +1,18 @@
+.empresaSection{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        img{
+            width: 220px;
+        }
+    }
+}
