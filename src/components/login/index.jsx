@@ -1,17 +1,34 @@
-export const LoginCandidato = () =>{
-    return(
-        <section>
-            <div>
+import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+
+export const LoginCandidato = () => {
+    const {
+        register,
+        handleSubmit,
+        watch,
+        formState: { errors },
+    } = useForm();
+
+    const onSubmit = (data) => console.log(data)
+
+    return (
+        <section className="loginSection">
+            <div className="container">
                 <h2>Login do Estudante</h2>
-                <form>
-                    <div>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className="inputEdit">
                         <span>Email/cpf</span>
                         <input {...register("Login")} />
                     </div>
 
-                    <div>
+                    <div className="inputEdit">
                         <span>Senha</span>
                         <input {...register("Senha")} />
+                    </div>
+                    <div className="btnCard">
+                        <button className="btn" type="submit">Entrar</button>
+                        <span>ou</span>
+                        <Link className="btn" to="/curriculo">Cadastre-se</Link>
                     </div>
                 </form>
             </div>
